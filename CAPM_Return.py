@@ -91,7 +91,7 @@ try:
     return_value = []
 
     for stock, value in beta.items():
-        return_value.append(str(round(rf+(value*(rf-rm)),2)))
+        return_value.append(str((round(rf+(value*(rm-rf))),2)))
     return_df['Stock'] = stocks_list
 
     return_df['Return Value'] = return_value
